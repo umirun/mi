@@ -1,38 +1,34 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Asosiy konteyner: barchasini sahifaning o'rtasiga joylashtiradi */
+.container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100vh; /* Butun ekran balandligini egallaydi */
+  background-color: #f0f0f0; /* Orqa foni */
 }
 
-.App-link {
-  color: #61dafb;
+/* Rasmlar orasidagi masofa uchun */
+.image-wrapper {
+  margin: 0 40px; /* Chap va o'ngdan 40px masofa */
 }
 
-@keyframes App-logo-spin {
+/* AYLANISH UCHUN ASOSIY KOD */
+.rotating-image {
+  width: 200px; /* Rasmlarning eni */
+  height: 200px; /* Rasmlarning bo'yi */
+  border-radius: 50%; /* Rasmlarni aylana shaklida qilish uchun */
+  border: 5px solid #3498db; /* Chiroyli ko'rinish uchun chegara */
+
+  /* Animatsiyani chaqirish */
+  animation: spin 4s linear infinite;
+}
+
+/* 'spin' nomli animatsiyani aniqlash */
+@keyframes spin {
   from {
-    transform: rotate(0deg);
+    transform: rotate(0deg); /* Boshlang'ich holat: 0 gradus */
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(360deg); /* Oxirgi holat: 360 gradus (to'liq aylanish) */
   }
 }
